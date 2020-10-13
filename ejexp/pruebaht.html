@@ -7,8 +7,19 @@
 </head>
 <body>
     <form action="pruebaphp.php" method="POST">
-        <label for="nombre">nombre</label><input type="text" name="nombre">
-        <button type="summit" name="enviar" value="enviar">SEND</button>
+        <label for="Nombre">nombre</label><input type="text" name="Nombre">
+
+        <input type="checkbox" name="aceptar"><label
+        for="aceptar">Acepto los terminos</label>
+
+        <!-- Radio button-->
+        <p>Ciclos:</p>
+        <p><input type="radio" name="ciclos" value="ASIR"> <label
+            for="ciclos">Administracion del sistemas informaticos y redes</label></p>
+        <p><input type="radio" name="ciclos" value="ASIR"> <label
+                for="ciclos">desarrollo web</label></p>
+                <!--boton de enviar-->
+        <input type="submit" name="enviar" value="Enviar">
     </form>
 </body>
 </html>
