@@ -3,15 +3,18 @@ print "<pre>";
 print_r($_REQUEST);
 print "</pre>";
 
+
+$ancho = $_REQUEST['ancho'];
+$alto = $_REQUEST['alto'];
 $grosor = $_REQUEST['grosor'];
-
-$tamano = $_REQUEST['tamaño'];
-
-$color = $_REQUEST['color']; 
+$color = $_REQUEST['color'];
 
 
-if($grosor!=''&&$tamaño!='')
-print "rellena las casillas ostia, huevon";
-
-
+if($ancho!='' &&$alto!=''){
+print "<svg width='$ancho' height='$alto'>
+  <rect width='$ancho' height='$alto' style='fill:$color;stroke-width:$grosor;stroke:$color'/>
+</svg>";
+}else{
+    print "<p>rellena las casillas ostia, huevon</p>";
+}
 ?>
