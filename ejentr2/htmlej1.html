@@ -9,14 +9,15 @@
     <form action="ej1.php" method="POST">
         <label for="grosor">grosor</label><input type="text" name="grosor">
         <label for="tamaño">tamaño</label><input type="text" name="tamaño">
-
-        <!-- Radio button-->
-        <p>Ciclos:</p>
-        <p><input type="radio" name="ciclos" value="ASIR"> <label
-            for="ciclos">Administracion del sistemas informaticos y redes</label></p>
-        <p><input type="radio" name="ciclos" value="ASIR"> <label
-                for="ciclos">desarrollo web</label></p>
-                <!--boton de enviar-->
+        <p></p><label for="color"></label>
+        <select name="color" size="4" multiple>
+            <option>azul</option>
+            <option>rojo</option>
+            <option>amarillo</option>
+            <option>negro</option>
+        </select>
+        
+                
         <input type="submit" name="enviar" value="Enviar">
         <!-- ELEMENTO OCULTO-->
         <input type="image" name="dado" id="../img/dados/1.svg">
