@@ -3,10 +3,13 @@ print "<pre>";
 print_r($_REQUEST);
 print "</pre>";
 
-$frutas=['manzana','fresa','limon','cereza','pera'];
-for($posicion=0; $posicion=5; $posicion++)
-{
-    print $frutas[$posicion];
-}
 
+if(isset($_REQUEST["fruta"])){
+    $frutas=$_REQUEST["fruta"];
+        print "<img src=\"img/frutas/$frutas.svg\" width='100' height='200'";
+        print "<p>fruta introducido";
+ 
+}else{
+        print "<p>introduce una de estas frutas: manzana, fresa, limon, cereza.</p>";
+}
 ?>

@@ -7,13 +7,13 @@
 </head>
 <body>
     <form action="ej3.php" method="POST">
-    <p></p><label for="posicion"></label>
-        <select name="" size="4" multiple>
-            <option value="blue">azul</option>
-            <option value="red">rojo</option>
-            <option value="yellow">amarillo</option>
-            <option value="black">negro</option>
-        </select>
+        <?php
+            $frutas=['manzana','fresa','limon','cereza','pera'];
+            for($posicion=0; $posicion=5; $posicion++)
+            {
+                print "<p><input type='radio' name='fruta' value='$frutas[$posicion]'>$frutas[$posicion]</input></p>";
+            }
+        ?>
         <input type="submit" name="calcular" value="calcular">
         </form>
 </body>
