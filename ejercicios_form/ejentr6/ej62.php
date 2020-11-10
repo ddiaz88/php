@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>
-        ej5.2
+        ej6.2
     </title>
 </head>
 <body>
    
     
-    <form action="ej5.php" method='POST'>
+    <form action="ej6.php" method='POST'>
     <?php
-    print"<p><input type='radio' name='forma'>sirculaso</input></p>";
-    print"<p><input type='radio' name='forma'>rectangulaso</input></p>";
+    print"<p><input type='radio' name='forma' value='circulo'>circulo</input></p>";
+    print"<p><input type='radio' name='forma' value='cuadrado'>cuadrado</input></p>";
     print"<ladel for='nombre'>tamaño</ladel><input type='number' name='tamaño'>";
       ?>  
         <input type="submit" name="calcular" value="calcular">
