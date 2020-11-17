@@ -16,13 +16,20 @@
                 <input type='text' id='apellido' name='apellido'><br><br>";
        print "<label for='peso'>peso:</label><br>
                 <input type='number' id='peso' name='peso'><br><br>";
-       print "<label for='edad'>selecciona 1:</label>
+       print "<label for='edad'>edad:</label>
        <select id='edad' name='edad'>
          <option value='niño'>niño</option>
          <option value='joven'>joven</option>
          <option value='viejo'>viejo</option>
          <option value='viejoven'>viejoven ;)</option>
        </select><br><br>";
+       print "<p> SEXO </p>
+       <input type='radio' id='mucho' name='sexo' value='mucho'>
+       <label for='mucho'>mucho</label><br>
+       <input type='radio' id='poco' name='sexo' value='poco'>
+       <label for='poco'>poco</label><br>
+       <input type='radio' id='ni a palos' name='sexo' value='ni a palos'>
+       <label for='ni a palos'>ni a palos</label><br><br>";
         
         
     
