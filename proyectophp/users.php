@@ -184,19 +184,18 @@
 
         <?php if($_GET): ?>
         <form action="edit.php" method="POST">
-                <p>
+                
                     <label for="nick"></label>
-                    <input type="text" name="nick" >
-                </p>
-                <p>
+                    <input type="text" name="nick" value="<?php print $resultado_id['nick']?>" >
+                
                     <label for="passwd"></label>
-                    <input type="password" name="passwd" >
-                </p>
-                <p>
+                    <input type="password" name="passwd" value="<?php print $resultado_id['passwd']?>">
+                    <input type="hidden" name="id" value="<?php print $resultado_id['id']?>">
+                
                     <label for="email"></label>
                     <input type="text" name="email">
-                </p>
-                <p><button>EDITAR</button></p>
+                
+                <button>EDITAR</button>
         </form>
         <?php endif ?>
 
