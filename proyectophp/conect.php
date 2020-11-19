@@ -10,7 +10,7 @@ try {
     $gbd = new PDO ($link, $usuario, $pwd);
     print"conectado";
 } catch (PDOException $e){
-print "¡error!:" . $e->getMessage()."<br>";
+print "¡error!:" . $e->getMessage()."<br/>";
 die();
 
 }
