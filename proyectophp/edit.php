@@ -4,10 +4,10 @@ $id = $_GET["id"];
 $nick = $_GET["nick"];
 $passwd = $_GET["passwd"];
 $email = $_GET["email"];
-
+print_r($_GET);
 include_once 'conect.php';
 
-$sql_update = " UPDATE userinfo SET nick=?, passwd=?
+$sql_update = " UPDATE userinfo SET nick=?, passwd=?,
 email=? WHERE id=?";
 
 $sentencia_sql = $gbd -> prepare($sql_update);

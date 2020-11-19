@@ -10,7 +10,7 @@
     print_r($_POST);
     if($_GET){
         $id=$_GET['id'];
-        $sql_lectura_id="SELECT * FROM userinfo WHERE id=?";
+        $sql_lecture_id="SELECT * FROM userinfo WHERE id=?";
         $sentencia_select_id = $gbd->prepare($sql_lecture_id);
         $sentencia_select_id->execute(array($id)); 
         $resultado_id = $sentencia_select_id->fetch();
@@ -29,15 +29,6 @@
 
             header("location:users.php");
         }
-    if ($_GET) {
-        $id = $_GET['id'];
-        $sql_selectid = "SELECT * FROM userinfo WHERE id = ?";
-
-        $sentencia_sql =$gbd->prepare($sql_selectid);
-        $sentencia_sql->execute(array($id));
-
-        $resultadoid = $sentencia_sql->fetch();
-    }
     }
     ?>
 
@@ -183,7 +174,7 @@
         <?php endif ?>
 
         <?php if($_GET): ?>
-        <form action="edit.php" method="POST">
+        <form action="edit.php" method="GET">
                 
                     <label for="nick"></label>
                     <input type="text" name="nick" value="<?php print $resultado_id['nick']?>" >
@@ -366,24 +357,7 @@
           </div>
         </div>
       </div>
-<script>
-  (function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
